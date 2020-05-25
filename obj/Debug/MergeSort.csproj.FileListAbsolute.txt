@@ -1,0 +1,10 @@
+C:\Users\vasil\source\repos\MergeSort\bin\Debug\MergeSort.exe.config
+C:\Users\vasil\source\repos\MergeSort\bin\Debug\MergeSort.exe
+C:\Users\vasil\source\repos\MergeSort\bin\Debug\MergeSort.pdb
+C:\Users\vasil\source\repos\MergeSort\obj\Debug\MergeSort.csprojAssemblyReference.cache
+C:\Users\vasil\source\repos\MergeSort\obj\Debug\MergeSort.Properties.Resources.resources
+C:\Users\vasil\source\repos\MergeSort\obj\Debug\MergeSort.csproj.GenerateResource.cache
+C:\Users\vasil\source\repos\MergeSort\obj\Debug\MergeSort.csproj.CoreCompileInputs.cache
+C:\Users\vasil\source\repos\MergeSort\obj\Debug\MergeSort.exe
+C:\Users\vasil\source\repos\MergeSort\obj\Debug\MergeSort.pdb
+C:\Users\vasil\source\repos\MergeSort\obj\Debug\MergeSort.Form1.resources
