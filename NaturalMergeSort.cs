@@ -56,17 +56,25 @@ namespace MergeSort
             }
             return arr;
         }
-
         private static List<Elem> GetLimit(ref List<Elem> a)
         {
             int i = 0;
             List<Elem> tmp = new List<Elem>() { };
-            while (!a.ElementAt(i).EndOfSubSequence)
+            Elem tmpElem = a.ElementAt(i);
+            while ((a.Count > 1) && (a.ElementAt(i).Value <= a.ElementAt(i + 1).Value))
+            {
+                tmpElem = a.ElementAt(i);
+                tmp.Add(tmpElem);
+                a.RemoveAt(i);
+            }
+
+            if (a.Count > 1 && (a.ElementAt(i).Value > a.ElementAt(i + 1).Value) && (tmpElem.Value <= a.ElementAt(i).Value))
             {
                 tmp.Add(a.ElementAt(i));
                 a.RemoveAt(i);
             }
-            if (a.Count != 0 && a.ElementAt(i).EndOfSubSequence)
+
+            if (a.Count == 1 && (a.ElementAt(0).Value >= tmpElem.Value))
             {
                 tmp.Add(a.ElementAt(i));
                 a.RemoveAt(i);
@@ -193,16 +201,6 @@ namespace MergeSort
                 }
             }
 
-            if (a1.Count != 0)
-            {
-                a1.Last().EndOfSubSequence = true;
-            }
-
-            if (a2.Count != 0)
-            {
-                a2.Last().EndOfSubSequence = true;
-            }
-
             if (a1.Count == 0)
             {
                 return true;
@@ -220,7 +218,6 @@ namespace MergeSort
             if (order == 1)
             {
                 Elem el = new Elem(arr.ElementAt(k));
-                el.EndOfSubSequence = true;
                 a1.Add(el);
                 CountMoves++;
                 arr.RemoveAt(k);
@@ -229,7 +226,6 @@ namespace MergeSort
             else
             {
                 Elem el = new Elem(arr.ElementAt(k));
-                el.EndOfSubSequence = true;
                 a2.Add(el);
                 CountMoves++;
                 arr.RemoveAt(k);
