@@ -49,8 +49,8 @@ namespace MergeSort
             DG2.ColumnCount = n;
             DG2.RowCount = 1;
             DG2.Rows[0].Height = 43;
-            MergeSort.CountComps = 0;
-            MergeSort.CountMoves = 0;
+            NaturalMergeSort.CountComps = 0;
+            NaturalMergeSort.CountMoves = 0;
             FormHelper.MatrToGRid(DG2, FormHelper.OutputResultNaturalMergeSort(arr.ToArray()), n);
             TBCompsNatMerge.Text = NaturalMergeSort.CountComps.ToString();
             TBMovesNatMerge.Text = NaturalMergeSort.CountMoves.ToString();
